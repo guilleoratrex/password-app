@@ -47,7 +47,11 @@ input::placeholder {
 }
 
 .input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   position: relative;
+  margin-bottom: 24px;
 }
 
 .input-container input {
@@ -70,12 +74,6 @@ form {
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-}
-
-.input-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
 }
 
 .column {
