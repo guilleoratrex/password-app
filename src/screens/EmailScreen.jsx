@@ -25,7 +25,7 @@ export const EmailScreen = () => {
 
     setStatus(`${t('email-screen.status.sending')}`)
 
-    axios.post('http://localhost:1337/api/auth/forgot-password', formState)
+    axios.post('https://backoffice.oratrex.com/api/auth/forgot-password', formState)
       .then(() => {
         setStatus(`${t('email-screen.status.sent')}`)
         setError('')

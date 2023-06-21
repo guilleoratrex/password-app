@@ -41,7 +41,7 @@ export const PasswordScreen = ({ code }) => {
     setStatus(`${t('password-screen.status.sending')}`)
 
     axios
-      .post('http://localhost:1337/api/auth/reset-password', {
+      .post('https://backoffice.oratrex.com/api/auth/reset-password', {
         code: formState.validationCode,
         password: formState.password,
         passwordConfirmation: formState.repeatPassword,
