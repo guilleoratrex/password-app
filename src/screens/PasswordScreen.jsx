@@ -65,6 +65,7 @@ export const PasswordScreen = ({ code }) => {
             value={formState.password}
             onChange={handleInputChange}
             placeholder='Nueva contraseña'
+            disabled={status !== 'Aceptar'}
           />
           <i className='toggle-password'>
             <FontAwesomeIcon icon={!showPassword ? faEye : faEyeSlash} onClick={handleShowPassword} />
@@ -80,6 +81,7 @@ export const PasswordScreen = ({ code }) => {
             value={formState.repeatPassword}
             onChange={handleInputChange}
             placeholder='Repite nueva contraseña'
+            disabled={status !== 'Aceptar'}
           />
           <i className='toggle-password'>
             <FontAwesomeIcon icon={!showPassword ? faEye : faEyeSlash} onClick={handleShowPassword} />

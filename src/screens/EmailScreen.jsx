@@ -48,6 +48,7 @@ export const EmailScreen = () => {
           value={formState.email}
           onChange={handleInputChange}
           placeholder='Email'
+          disabled={status !== 'Aceptar'}
         />
 
         <button type='submit'
