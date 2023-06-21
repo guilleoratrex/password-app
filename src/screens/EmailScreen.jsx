@@ -1,12 +1,12 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
 
 export const EmailScreen = () => {
 
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('common')
 
-  const [status, setStatus] = useState('Aceptar')
+  const [status, setStatus] = useState(`${t('email-screen.status.accept')}`)
   const [error, setError] = useState()
   const [formState, setFormState] = useState({
     email: ''
@@ -72,7 +72,7 @@ export const EmailScreen = () => {
 
       {
         error &&
-        <p className='text-center'>{error}</p>
+        <p className='text-center error'>{error}</p>
       }
     </>
   )

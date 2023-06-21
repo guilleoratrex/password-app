@@ -13,5 +13,30 @@
       "accept": "Accept",
       "sent": "Sent!"
     }
+  },
+  "password-screen": {
+    "title": "Create a new password",
+    "instruction": "Password must contain at least 8 characters: one uppercase, one lowercase and one number.",
+    "label": {
+      "l-1": "Enter a new password",
+      "l-2": "Repeat new password"
+    },
+    "placeholder": {
+      "p-1": "New password",
+      "p-2": "Repeat new password"
+    },
+    "success": {
+      "m-1": "New password has been successfully created",
+      "m-2": "You can now access your account again!"
+    },
+    "error": {
+      "generic-error": "There has been a problem. Please try again.",
+      "password-error": "The password does not meet the requirements: minimum 8 characters, one uppercase, one lowercase and one number."
+    },
+    "status": {
+      "sending": "Sending...",
+      "accept": "Accept",
+      "sent": "Saved!"
+    }
   }
 }

@@ -13,5 +13,30 @@
       "accept": "Acceptar",
       "sent": "Enviat!"
     }
+  },
+  "password-screen": {
+    "title": "Crea una nova contrasenya",
+    "instruction": "La contrasenya ha de contenir mínim 8 caràcters: una majúscula, una minúscula i un número",
+    "label": {
+      "l-1": "Introduïu una contrasenya nova",
+      "l-2": "Repeteix la contrasenya nova"
+    },
+    "placeholder": {
+      "p-1": "Nova contrasenya",
+      "p-2": "Repeteix la contrasenya nova"
+    },
+    "success": {
+      "m-1": "S'ha creat correctament la contrasenya nova",
+      "m-2": "Ja pots tornar a accedir al teu compte!"
+    },
+    "error": {
+      "generic-error": "Hi ha hagut un problema. Si us plau, torna-ho a intentar.",
+      "password-error": "La contrasenya no compleix els requisits: mínim 8 caràcters, una majúscula, una minúscula i un número."
+    },
+    "status": {
+      "sending": "Enviant...",
+      "accept": "Acceptar",
+      "sent": "Desat!"
+    }
   }
 }

@@ -104,3 +104,7 @@ form {
   font-weight: 700;
   color: #5D37CF;
 }
+
+.error {
+  color: rgb(222, 0, 0);
+}
