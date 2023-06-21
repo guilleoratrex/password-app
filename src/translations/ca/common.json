@@ -1,0 +1,17 @@
+{
+  "email-screen": {
+    "title": "Has oblidat la contrasenya?",
+    "instruction": "Introdueix el teu email i t'enviarem un enllaç per poder crear una nova contrasenya.",
+    "label": "Introdueix el teu email",
+    "success": {
+      "m-1": "Hem enviat un email a",
+      "m-2": "Revisa la safata d'entrada i segueix les instruccions per crear una contrasenya nova."
+    },
+    "error": "Hi ha hagut un problema. Si us plau, torna-ho a intentar",
+    "status": {
+      "sending": "Enviant...",
+      "accept": "Acceptar",
+      "sent": "Enviat!"
+    }
+  }
+}

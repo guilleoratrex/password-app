@@ -1,7 +1,10 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next';
 
 export const EmailScreen = () => {
+
+  const { t } = useTranslation('common');
 
   const [status, setStatus] = useState('Aceptar')
   const [error, setError] = useState()
@@ -20,50 +23,50 @@ export const EmailScreen = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    setStatus('Enviando ...')
+    setStatus(`${t('email-screen.status.sending')}`)
 
     axios.post('http://localhost:1337/api/auth/forgot-password', formState)
       .then(() => {
-        setStatus('Enviado!')
+        setStatus(`${t('email-screen.status.sent')}`)
         setError('')
       })
       .catch(error => {
         console.log(error)
-        setStatus('Aceptar')
-        setError('Ha habido un problema. Por favor, inténtalo de nuevo')
+        setStatus(`${t('email-screen.status.accept')}`)
+        setError(`${t('email-screen.error')}`)
       })
   }
 
   return (
     <>
       <div className='flex-container column justify-center align-center text-center'>
-        <h1>¿Olvidaste la contraseña?</h1>
-        <p className='text-center'>Introduce tu dirección de email y te enviaremos un código para poder crear una nueva contraseña.</p>
+        <h1>{t('email-screen.title')}</h1>
+        <p className='text-center'>{t('email-screen.instruction')}</p>
       </div>
       <form onSubmit={handleSubmit} className='flex-container column justify-center'>
-        <label htmlFor="email">Introduce tu email</label>
+        <label htmlFor="email">{t('email-screen.label')}</label>
         <input
-          type='text'
+          type='email'
           name='email'
           value={formState.email}
           onChange={handleInputChange}
           placeholder='Email'
-          disabled={status !== 'Aceptar'}
+          disabled={status !== `${t('email-screen.status.accept')}`}
         />
 
         <button type='submit'
-          disabled={status !== 'Aceptar' ? true : false}
-          className={status === 'Enviando...' ? 'btn-disabled' : ''}
+          disabled={status !== `${t('email-screen.status.accept')}` ? true : false}
+          className={status === `${t('email-screen.status.sending')}` ? 'btn-disabled' : ''}
         >
           {status}
         </button>
       </form>
 
       {
-        status === 'Enviado!' &&
+        status === `${t('email-screen.status.sent')}` &&
         <>
-          <p className='text-center'>Hemos enviado un email a <span className='text-bold'>{formState.email}</span></p>
-          <p className='text-center'>Revisa tu bandeja de entrada y sigue las instrucciones para crear una nueva contraseña.</p >
+          <p className='text-center'>{t('email-screen.success.m-1')} <span className='text-bold'>{formState.email}</span></p>
+          <p className='text-center'>{t('email-screen.success.m-2')}</p >
         </>
       }
 

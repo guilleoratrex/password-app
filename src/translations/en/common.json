@@ -1,0 +1,17 @@
+{
+  "email-screen": {
+    "title": "Forgot your password?",
+    "instruction": "Enter your email address and we will send you a link to create a new password.",
+    "label": "Enter your email",
+    "success": {
+      "m-1": "We have sent an email to",
+      "m-2": "Check your inbox and follow the instructions to create a new password."
+    },
+    "error": "There has been a problem. Please try again",
+    "status": {
+      "sending": "Sending...",
+      "accept": "Accept",
+      "sent": "Sent!"
+    }
+  }
+}

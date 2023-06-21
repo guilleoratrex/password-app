@@ -1,0 +1,17 @@
+{
+  "email-screen": {
+    "title": "¿Olvidaste la contraseña?",
+    "instruction": "Introduce tu dirección de email y te enviaremos un enlace para poder crear una nueva contraseña.",
+    "label": "Introduce tu email",
+    "success": {
+      "m-1": "Hemos enviado un email a",
+      "m-2": "Revisa tu bandeja de entrada y sigue las instrucciones para crear una nueva contraseña."
+    },
+    "error": "Ha habido un problema. Por favor, inténtalo de nuevo",
+    "status": {
+      "sending": "Enviando...",
+      "accept": "Aceptar",
+      "sent": "¡Enviado!"
+    }
+  }
+}
